@@ -13,6 +13,7 @@ class HomePage extends StatefulWidget {
     " Games",
     " Health",
   ];
+  static const image = 'images/kek_square_1024x1024.png';
 
   @override
   _HomePageState createState() => _HomePageState();
