@@ -122,12 +122,12 @@ class _MainPageState extends State<MainPage> {
                   color: _themeProv.lightTheme ? Colors.black : Colors.white),
               elevation: 0,
               backgroundColor: Colors.transparent,
-              actions: [
-                NavBarLogo(),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.05,
-                )
-              ],
+              // actions: [
+              //   // NavBarLogo(),
+              //   SizedBox(
+              //     width: MediaQuery.of(context).size.width * 0.05,
+              //   )
+              // ],
             )
           : _appBarTabDesktop(_themeProv) as PreferredSizeWidget?,
       drawer: MediaQuery.of(context).size.width < 760
@@ -206,22 +206,22 @@ class _MainPageState extends State<MainPage> {
     return AppBar(
       elevation: 0.0,
       backgroundColor: _themeProv.lightTheme ? Colors.white : Colors.black,
-      title: MediaQuery.of(context).size.width < 780
-          ? EntranceFader(
-              duration: Duration(milliseconds: 250),
-              offset: Offset(0, -10),
-              delay: Duration(seconds: 3),
-              child: NavBarLogo(
-                height: 20.0,
-              ))
-          : EntranceFader(
-              offset: Offset(0, -10),
-              duration: Duration(milliseconds: 250),
-              delay: Duration(milliseconds: 100),
-              child: NavBarLogo(
-                height: MediaQuery.of(context).size.height * 0.035,
-              ),
-            ),
+      // title: MediaQuery.of(context).size.width < 780
+      //     ? EntranceFader(
+      //         duration: Duration(milliseconds: 250),
+      //         offset: Offset(0, -10),
+      //         delay: Duration(seconds: 3),
+      //         child: NavBarLogo(
+      //           height: 20.0,
+      //         ))
+      //     : EntranceFader(
+      //         offset: Offset(0, -10),
+      //         duration: Duration(milliseconds: 250),
+      //         delay: Duration(milliseconds: 100),
+      //         child: NavBarLogo(
+      //           height: MediaQuery.of(context).size.height * 0.035,
+      //         ),
+      //       ),
       actions: [
         for (int i = 0; i < _sectionsName.length; i++)
           _appBarActions(_sectionsName[i], i, _sectionsIcons[i], _themeProv),
@@ -279,11 +279,11 @@ class _MainPageState extends State<MainPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
-                child: NavBarLogo(
-                  height: 28,
-                ),
-              ),
+              // Center(
+              // child: NavBarLogo(
+              //   height: 28,
+              // ),
+              // ),
               Divider(
                 color: theme.lightTheme ? Colors.grey[200] : Colors.white,
               ),
