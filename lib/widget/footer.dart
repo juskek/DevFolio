@@ -17,24 +17,15 @@ class Footer extends StatelessWidget {
       width: width,
       color: _themeProvider.lightTheme ? Colors.white : Colors.grey[900],
       child: Center(
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            AdaptiveText(
-              "Developed in 💙 with ",
-              style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.w300,
-                color: _themeProvider.lightTheme ? Colors.black : Colors.white,
-              ),
-            ),
-            InkWell(
-              onTap: () => launchURL("https://github.com/mhmzdev/DevFolio"),
-              child: Text(
-                "Flutter",
-                style: TextStyle(color: Colors.blue),
-              ),
-            )
-          ],
+        child: AdaptiveText(
+          "Kek Tech Limited: Registered in England and Wales, Company No. 13800840." +
+              "\nWebsite Design: Copyright © 2020 Muhammad Hamza. Distributed under the MIT License.",
+          textAlign: TextAlign.center,
+          style: GoogleFonts.manrope(
+            fontSize: 8,
+            fontWeight: FontWeight.w300,
+            color: _themeProvider.lightTheme ? Colors.black : Colors.white,
+          ),
         ),
       ),
     );
