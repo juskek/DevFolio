@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/provider/themeProvider.dart';
+import 'package:folio/sections/home/home.dart';
 import 'package:folio/widget/socialMediaIcon.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -59,7 +60,8 @@ class _HomeMobileState extends State<HomeMobile> {
                   height: height * 0.01,
                 ),
                 Text(
-                  "Muhammad",
+                  // "Muhammad",
+                  HomePage.headlineRow1,
                   style: GoogleFonts.montserrat(
                       fontSize: height * 0.055,
                       color: _themeProvider.lightTheme
@@ -69,7 +71,7 @@ class _HomeMobileState extends State<HomeMobile> {
                       letterSpacing: 1.1),
                 ),
                 Text(
-                  "Hamza",
+                  HomePage.headlineRow2,
                   style: GoogleFonts.montserrat(
                       color: _themeProvider.lightTheme
                           ? Colors.black
@@ -92,11 +94,7 @@ class _HomeMobileState extends State<HomeMobile> {
                                 ? Colors.black
                                 : Colors.white,
                             fontWeight: FontWeight.w200),
-                        text: [
-                          " Flutter Developer",
-                          " Technical Writer",
-                          " UI/UX Enthusiast"
-                        ]),
+                        text: HomePage.animatedText),
                   ],
                 ),
                 SizedBox(

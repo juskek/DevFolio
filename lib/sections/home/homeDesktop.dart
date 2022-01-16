@@ -4,6 +4,7 @@ import 'package:folio/animations/bottomAnimation.dart';
 import 'package:folio/animations/entranceFader.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/provider/themeProvider.dart';
+import 'package:folio/sections/home/home.dart';
 import 'package:folio/widget/adaptiveText.dart';
 import 'package:folio/widget/socialMediaIcon.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,7 +48,7 @@ class HomeDesktop extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     AdaptiveText(
-                      "WELCOME TO MY PORTFOLIO! ",
+                      HomePage.intro,
                       style: GoogleFonts.montserrat(
                         fontSize: height * 0.03,
                         fontWeight: FontWeight.w300,
@@ -71,7 +72,7 @@ class HomeDesktop extends StatelessWidget {
                   height: height * 0.04,
                 ),
                 AdaptiveText(
-                  "Muhammad",
+                  HomePage.headlineRow1,
                   style: GoogleFonts.montserrat(
                       fontSize: width < 1200 ? height * 0.085 : height * 0.095,
                       fontWeight: FontWeight.w100,
@@ -81,7 +82,7 @@ class HomeDesktop extends StatelessWidget {
                       letterSpacing: 4.0),
                 ),
                 AdaptiveText(
-                  "Hamza",
+                  HomePage.headlineRow2,
                   style: GoogleFonts.montserrat(
                       color: _themeProvider.lightTheme
                           ? Colors.black
@@ -110,11 +111,7 @@ class HomeDesktop extends StatelessWidget {
                                 ? Colors.black
                                 : Colors.white,
                           ),
-                          text: [
-                            " Flutter Developer",
-                            " Technical Writer",
-                            " UI/UX Enthusiast"
-                          ]),
+                          text: HomePage.animatedText),
                     ],
                   ),
                 ),
